@@ -5,12 +5,13 @@
 
 char *strndup(const char *s, size_t n)
 {
-    char* new = malloc(n+1);
-    if (new) {
-        strncpy(new, s, n);
-        new[n] = '\0';
-    }
-    return new;
+  char* newstr = (char*)malloc(n+1);
+  if (newstr) 
+  {
+    strncpy(newstr, s, n);
+    newstr[n] = '\0';
+  }
+  return newstr;
 }
 
 #endif /* HAVE_STRNDUP */
